@@ -1,5 +1,4 @@
-<img align="center" alt="Robson-Js" height="60" width="200" src=".\assets\img\logo-univesp.png">
-
+![](.\assets\img\logo-univesp.png)
 ## Projeto Integrador II - ©2022 Grupo 073 - Ituverava-SP.
 
 O tema do seu Projeto Integrador (PI) neste semestre é: **Desenvolver um software com framework web que utilize banco de dados, inclua script web (Javascript), nuvem, uso de API, acessibilidade, controle de versão e testes. Opcionalmente, incluir análise de dados**
