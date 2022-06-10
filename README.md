@@ -1,4 +1,4 @@
-![](C:\univesp\PI II\pagina\assets\img\logo-univesp.png)
+![](.\assets\img\logo-univesp.png)
 
 ## Projeto Integrador II - ©2022 Grupo 073 - Ituverava-SP.
 
