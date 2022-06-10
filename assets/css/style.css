@@ -1,0 +1,1045 @@
+/*======Geral Variáveis======*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 475;
+  --primary-color: hsl(var(--hue), 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+  --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
+  --brand-dark: hsl(var(--hue), 100%, 14%);
+
+  --background-light: hsl(180, 14%, 97%);
+
+  font-size: 62.5%; /* 1rem = 10px */
+
+  --nav-height: 7.2rem;
+
+  --bg: #fcfcfc;
+  --bg-panel: #ebebeb;
+  --color-headings: hsl(var(--hue), 100%, 26%);
+  --color-text: #333333;
+}
+
+/*========= Scroll Suave =========*/
+html {
+  scroll-behavior: smooth;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  --bg: #fcfcfc;
+  --bg-panel: #ebebeb;
+  --color-headings: #0077ff;
+  --color-text: #333333;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans';
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+
+  /* background-color: var(--bg); */
+  background-color: #ececec;
+
+  align-items: flex-start;
+  justify-content: left;
+
+  height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background: #292c35;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding-block: 10rem;
+}
+
+section header h4 {
+  font-size: 1.4rem; /* 14px */
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+}
+
+section header h1 {
+  font-size: 3.4rem; /* 34px */
+  /* color: var(--headline); */
+  color: var(--primary-color);
+  line-height: 130%;
+
+  margin-bottom: 2.4rem;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph);
+}
+
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  /*Para ajustar os items dentro da caixa-botão*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+/*======CUSTOM COLORS======*/
+#services .card circle {
+  fill: var(--brand-light);
+}
+
+/* CHANGE THEME COLORS */
+
+#services.dark h1 {
+  color: var(--primary-color);
+}
+
+#services.dark .content .cards .card {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--color-text);
+}
+
+#services.dark .content .cards .card p {
+  color: var(--color-text);
+}
+
+#services.dark .content .cards .card h3 {
+  color: var(--primary-color);
+}
+
+#contact.dark h3 {
+  color: var(--brand-light);
+}
+
+#contact.dark ul li {
+  color: var(--brand-light);
+}
+
+/* ======================= */
+
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
+  fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*='#00856F'],
+#contact li path {
+  stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: white;
+}
+
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+  stroke: white;
+}
+
+/*=====MENU NAVIGATION==========*/
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background: var(--primary-color);
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+/*=====MENU-EXPANDED==========*/
+body.menu-expanded {
+  overflow: hidden;
+}
+
+/* ====Todos do primeiro nível somem exceto a tag nav==== */
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  transform: translateY(100%);
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+
+  transition: transform 300ms;
+  transform: translateY(0);
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .button {
+  background: white;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--primary-color);
+
+  display: inline-block;
+  padding: 16px 32px;
+
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+
+.menu .button:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  filter: brightness(1.2);
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  width: 120px;
+  height: 40px;
+}
+
+body.menu-expanded .logo path {
+  fill: white;
+}
+
+body.menu-expanded button path {
+  stroke: white;
+}
+
+/*======= Header Cabeçalho: Home =======*/
+#home {
+  padding-block: 0;
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+/*======Criando uma tag do HTML pelo CSS======*/
+#home::before {
+  content: '';
+  width: 100%; /*vw = largura vh = altura da Viewport*/
+  height: calc(76% + var(--nav-height));
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#home .button {
+  margin-inline: auto;
+
+  /*Centralizar o botão
+   margin-right: auto;
+   margin-left: auto;*/
+}
+
+#home p {
+  font-size: 1.8rem; /* 18px */
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--paragraph);
+
+  margin-bottom: 3.2rem;
+}
+
+#home img {
+  /*Configurar a imagem que está dentro do header*/
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+/*======Configurando a div class stats======*/
+#home .stats {
+  width: 100%;
+  /*height: 47rem;*/
+  padding-block: 4rem;
+  /*O mesmo que margin-right e margin-left (auto)*/
+  margin-inline: auto;
+
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+
+  /*padding-top: 4rem;*/
+}
+
+/*======Configurando a div class stat======*/
+#home .stat p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+#home .stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+/*============SERVICES============*/
+#services header h2 {
+  margin-bottom: 6rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  /* background: #ffffff; */
+  background-color: var(--bg-panel);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
+}
+
+/*============ ABOUT ============*/
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+/*============ CONTACT ============*/
+
+#contact {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#contact .col2 {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+/*============ FOOTER ============*/
+footer {
+  background-color: var(--brand-dark);
+  color: var(--color-text);
+  padding-block: 8rem;
+
+  text-align: left;
+  color: white;
+}
+
+
+
+footer .logo {
+  display: inline-block;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+
+}
+
+/*======Mudar largura e altura da logo======*/
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+/*======Mudar cor para todos path da logo======*/
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 1.5;
+
+  margin-bottom: 13.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/*======BACK TO TOP======*/
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ========== DARK / LIGTH THEME =============*/
+nav#navigation .checkbox {
+  opacity: 0;
+  display: none;
+  position: absolute;
+}
+
+nav#navigation .label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  transform: scale(1.5);
+}
+
+nav#navigation .label .ball {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  height: 17px;
+  width: 17px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+nav#navigation .checkbox:checked + .label .ball {
+  transform: translateX(17px);
+}
+
+nav#navigation .fa-moon {
+  color: #f1c40f;
+}
+
+nav#navigation .fa-sun {
+  color: #f39c12;
+}
+/* ========== FIM DARK / LIGTH THEME =============*/
+
+/* IDIOMA */
+nav#navigation .img-opcoes {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+nav#navigation .opcoes .gOcwcv {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease 0s;
+}
+
+nav#navigation .opcoes #botao1:hover {
+  filter: grayscale(0%);
+}
+
+nav#navigation .opcoes #botao2:hover {
+  filter: grayscale(0%);
+}
+
+nav#navigation .opcoes #botao3:hover {
+  filter: grayscale(0%);
+}
+/* ========================= */
+
+
+
+
+/*======================== RESPONSIVO ============================= */
+@media (min-width: 1024px) {
+  /*============GERAL============*/
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
+  section {
+    padding-block: 16rem;
+  }
+
+  section header h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  /*============NAVIGATION============*/
+  /*============RESET============*/
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+  /*============FIM RESET=======*/
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .menu ul li a {
+    color: var(--primary-color);
+    opacity: 0.7;
+  }
+
+  nav#navigation .menu a.button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 4rem;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  nav#navigation .menu a.button:hover {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+  }
+
+  /* ========== DARK / LIGTH THEME =============*/
+  nav#navigation .checkbox {
+    opacity: 0;
+    display: none;
+    position: absolute;
+  }
+
+  nav#navigation .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    transform: scale(1.5);
+  }
+
+  nav#navigation .label .ball {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    height: 17px;
+    width: 17px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+
+  nav#navigation .checkbox:checked + .label .ball {
+    /* transform: translateX(24px); */
+    transform: translateX(17px);
+  }
+
+  nav#navigation .fa-moon {
+    color: #f1c40f;
+  }
+
+  nav#navigation .fa-sun {
+    color: #f39c12;
+  }
+  /* ========== FIM DARK / LIGTH THEME =============*/
+
+
+  /* nav#navigation .dark {
+    position: absolute;
+    margin-right: 10px;
+  } */
+  
+
+  /* ************** avatar select ********** */
+
+  /* select with CSS avatar icons */
+  nav#navigation option.avatar {
+    background-repeat: no-repeat !important;
+    padding-left: 20px;
+  }
+  nav#navigation .avatar .ui-icon {
+    background-position: left top;
+  }
+
+  /* ************** fim  avatar select ********** */
+
+  /* ************** language ********** */
+
+  nav#navigation .language {
+    position: relative;
+    width: 120px;
+    margin-left: 40px;
+    font-weight: bold;
+  }
+
+  nav#navigation .language-selected {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav#navigation .language-selected:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://www.countryflags.io/br/flat/32.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+
+  nav#navigation .language-selected.change-br:before {
+    background-image: url(https://www.countryflags.io/br/flat/32.png);
+  }
+
+  nav#navigation .language-selected.change-en:before {
+    background-image: url(https://www.countryflags.io/us/flat/32.png);
+  }
+
+  nav#navigation .language-selected.change-es:before {
+    background-image: url(https://www.countryflags.io/es/flat/32.png);
+  }
+
+  nav#navigation .language:hover ul {
+    display: block;
+  }
+
+  /* Section */
+  nav#navigation .section {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  /* ************** fim language ********** */
+
+  /* ============= FIM DO BOTAO DARK ============ */
+
+  nav#navigation.scroll .menu ul li a {
+    color: var(--brand-light-2);
+    opacity: 0.6rem;
+  }
+
+  nav#navigation.scroll .menu a.button {
+    border-color: white;
+    color: white;
+  }
+
+  nav#navigation .menu li a {
+    transition: opacity 0.4s;
+  }
+
+  nav#navigation .menu li a.active,
+  nav#navigation .menu li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  nav#navigation .menu li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+
+    position: relative;
+    bottom: -2rem;
+    left: -0.5rem;
+
+    display: block;
+
+    transition: width 0.2s;
+  }
+
+  nav#navigation.scroll .menu li a::after {
+    background-color: white;
+  }
+
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+
+  nav#navigation.scroll .menu li a.active,
+  nav#navigation.scroll .menu li a:hover {
+    opacity: 1;
+  }
+
+  nav#navigation.scroll .menu a.button.active,
+  nav#navigation.scroll .menu a.button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.3);
+    border: none;
+  }
+
+  /*============ HOME ============*/
+  /*============ Display GRID!!! ============*/
+  #home::before {
+    height: calc(96% - var(--nav-height));
+  }
+
+  #home {
+    padding-top: var(--nav-height);
+  }
+
+  #home .wrapper {
+    grid-template-columns: 60.5rem 1fr;
+    grid-template-areas:
+      'A B'
+      'C C';
+  }
+
+  #home .col-a {
+    text-align: left;
+    align-self: center;
+  }
+
+  #home h1 {
+    font-size: 5.2rem;
+  }
+
+  #home .content p {
+    font-size: 1.8rem;
+  }
+
+  #home .stats {
+    grid-area: C;
+
+    flex-direction: row;
+    padding: 6rem;
+    gap: 0;
+  }
+
+  #home .stats .stat + .stat {
+    border-left: 1px solid var(--primary-color);
+  }
+
+  #home .stats .stat {
+    flex: 1;
+  }
+
+  #home .button {
+    margin: 0;
+  }
+
+  #home img {
+    width: 43rem;
+  }
+
+  /*============ SERVICES =============*/
+  #services h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  /*============ ABOUT =============*/
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
+
+  /*============ CONTACT =============*/
+  #contact .wrapper {
+    grid-template-columns: 1fr 57.5rem;
+    grid-template-areas: 'A B';
+  }
+
+  #contact h2 {
+    width: 30.4rem;
+  }
+
+  /*============ FOOTER =============*/
+  footer {
+    /* padding-block: 3rem;
+    height: 60px; */
+
+    background-color: var(--primary-color);
+    padding-block: 6rem;
+  
+    text-align: left;
+    color: white;
+  
+  }
+
+  footer .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+
+  footer .col-a {
+    align-self: center;
+  }
+
+  footer .col-b {
+    align-self: center;
+    justify-self: flex-end;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+}
+
+
+
