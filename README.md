@@ -1,4 +1,4 @@
-![](C:\univesp\PI II\pagina\assets\img\logo-univesp.png)
+<img align="center" alt="Robson-Js" height="60" width="200" src=".\assets\img\logo-univesp.png">
 
 ## Projeto Integrador II - ©2022 Grupo 073 - Ituverava-SP.
 
