@@ -1,32 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Foco na Dengue</title>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
-        integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
-        integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
-        integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
-
+    <!-- Título da página (aparece na aba) -->
+    <title>Formulário de Denuncia</title>
 </head>
 
-<body>
+<body style="margin-left: 10px; margin-right: 10px;  box-sizing: border-box;">
 
     <nav id="navigation">
         <div class="wrapper">
@@ -44,18 +31,20 @@
                 <!-- <img src="assets/img/logo.png" alt="Logomarca da univesp"> -->
             </a>
 
+
+
             <div class="menu">
                 <ul>
                     <li>
-                        <a class="active" onclick="closeMenu()" href="INDEX.HTML">Início</a>
+                        <a class="active" onclick="closeMenu()" href="index.html">Início</a>
                     </li>
                     <li><a onclick="closeMenu()" href="estatisticas.html">Estatísticas</a></li>
-                    <li><a onclick="closeMenu()" href="contato.html">Contato</a></li>
+                    <li><a onclick="closeMenu()" href="#">Contato</a></li>
                 </ul>
 
-                <!-- <div>
-                    <a class="button" onclick="closeMenu()" href="#">Denunciar</a>
-                </div> -->
+                <div>
+                    <a class="button" onclick="closeMenu()" href="formulario.html">Denunciar</a>
+                </div>
 
 
                 <div class="dark">
@@ -146,146 +135,145 @@
         </div>
     </nav>
 
-    <section id="services">
-        <div class="wrapper">
-            <header>
-                <center>
-                    <h1 id="title-page">FORMULÁRIO DE DENUNCIA</h1>
-                </center>
-            </header>
 
-            <div class="content">
-                <div class="cards">
+    <section class="formulario">
 
-                    <div class="card">
+        <center>
+            <h1>Formulário de Denúncia</h1>
+        </center>
 
-                        <form>
+        <form>
 
-                            <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" class="form-control" id="nome" aria-describedby="nome"
-                                    placeholder="Digite seu nome">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="sobrenome">Sobrenome</label>
-                                <input type="text" class="form-control" id="sobrenome" aria-describedby="sobrenome"
-                                    placeholder="Digite seu sobrenome">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Endereço de email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Seu email">
-                                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email,
-                                    com
-                                    ninguém.</small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="fone">Telefone</label>
-                                <input type="tel" class="form-control" id="fone" placeholder="Telefone ou celular">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="nascimento">Nascimento</label>
-                                <input type="date" name="birthday" class="form-control" id="nascimento" required />
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="cidade">Selecione a cidade</label>
-                                <select class="form-control" id="cidade">
-                                    <option>Ituverava</option>
-                                    <option>Guará</option>
-                                    <option>São Joaquim da Barra</option>
-                                    <option>Morro Agudo</option>
-                                    <option>Franca</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="bairro">Bairro</label>
-                                <input type="text" class="form-control" id="bairro" aria-describedby="bairro"
-                                    placeholder="Digite seu bairro">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="datetime-local">Data e horário</label>
-                                <input type="datetime-local" class="form-control" name="datetime-local"
-                                    id="datetime-local" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleFormControlFile1">Foto do local</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                            </div>
-
-                            <div class="form-group form-check">
-                                <label>Selecione pelo menos um motivo</label>
-                                <br>
-                                <input type="checkbox" class="form-check-input" id="check1">
-                                <label class="form-check-label" for="check1">Criadouros</label>
-                                <br>
-                                <input type="checkbox" class="form-check-input" id="check2">
-                                <label class="form-check-label" for="check2">Residência abandonada</label>
-                                <br>
-                                <input type="checkbox" class="form-check-input" id="check3">
-                                <label class="form-check-label" for="check3">Terreno abandonado</label>
-                                <br>
-                                <input type="checkbox" class="form-check-input" id="check4">
-                                <label class="form-check-label" for="check4">Construção abandonada</label>
-                                <br>
-                                <input type="checkbox" class="form-check-input" id="check5">
-                                <label class="form-check-label" for="check5">Outro motivo</label>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="textarea">Utilize o campo abaixo para descrever outro motivo mais
-                                    informações e
-                                    comentários.</label>
-                                <textarea class="form-control" id="textarea" rows="6"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome">
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" aria-describedby="sobrenome"
+                    placeholder="Digite seu sobrenome">
+            </div>
+
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Endereço de email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Seu email">
+                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                    ninguém.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="fone">Telefone</label>
+                <input type="tel" class="form-control" id="fone" placeholder="Telefone ou celular">
+            </div>
+
+            <div class="form-group">
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" name="birthday" id="nascimento" required />
+            </div>
+
+
+            <div class="form-group">
+                <label for="cidade">Selecione a cidade</label>
+                <select class="form-control" id="cidade">
+                    <option>Ituverava</option>
+                    <option>Guará</option>
+                    <option>São Joaquim da Barra</option>
+                    <option>Morro Agudo</option>
+                    <option>Franca</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro" aria-describedby="bairro"
+                    placeholder="Digite seu bairro">
+            </div>
+
+            <div class="form-group">
+                <label for="datetime-local">Data e horário</label>
+                <input type="datetime-local" name="datetime-local" id="datetime-local" required />
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Foto do local</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+            <div class="form-group form-check">
+                <label>Selecione pelo menos um motivo</label>
+                <input type="checkbox" class="form-check-input" id="check1">
+                <label class="form-check-label" for="check1">Criadouros</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="check2">
+                <label class="form-check-label" for="check2">Residência abandonada</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="check3">
+                <label class="form-check-label" for="check3">Terreno abandonado</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="check4">
+                <label class="form-check-label" for="check4">Construção abandonada</label>
+                <br>
+                <input type="checkbox" class="form-check-input" id="check5">
+                <label class="form-check-label" for="check5">Outro motivo</label>
+
+            </div>
+
+            <div class="form-group">
+                <label for="textarea">Utilize o campo abaixo para descrever outro motivo mais informações e
+                    comentários.</label>
+                <textarea class="form-control" id="textarea" rows="6"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+
     </section>
 
-    <!-- <footer> -->
-    <footer class="footer navbar-fixed-bottom">
-        <div class="wrapper">
-            <div class="col-a">
-                <a class="logo" href="#home">
-                    <img src="assets/img/logo.png" alt="Logomarca da univesp">
-                </a>
-                <p>
-                    Projeto Integrador II Univesp
-                    <br>
-                    ©2022 Grupo 073 - Ituverava-SP.
-                </p>
-                <br>
+
+    <!-- <section id="form">
+        <form action="">
+            <h3>Formulário de Denúncia</h3>
+            <div class="form-group">
+                <input class="input-control" placeholder="Nome" />
+
+                <input type="email" class="input-control" placeholder="Email" />
             </div>
-        </div>
-    </footer>
 
-    <a id="backToTopButton" href="#services">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="20" fill="#00856F" />
-            <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-    </a>
+            <div class="form-group">
+                <input class="input-control" placeholder="Empresa" />
+            </div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+            <div class="form-group">
+                <input class="input-control" placeholder="Endereço" />
+            </div>
+
+            <div class="form-group">
+                <input class="input-control" placeholder="Cidade" style="flex: 3 1" />
+                <input class="input-control" placeholder="Estado" style="flex: 1" />
+                <input class="input-control" placeholder="CEP" style="flex: 1" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="button">Enviar</button>
+
+            </div>
+
+        </form>
+    </section> -->
+
+    <!--js-->
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+
 
 </body>
+
+
+
+</html>

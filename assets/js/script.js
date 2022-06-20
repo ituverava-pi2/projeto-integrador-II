@@ -3,8 +3,17 @@ const chk = document.getElementById('chk')
 
 chk.addEventListener('change', () => {
   document.body.classList.toggle('dark')
-  document.getElementById('services').classList.toggle('dark')
-  document.getElementById('contact').classList.toggle('dark')
+  // document.getElementById('services').classList.toggle('dark')
+  // document.getElementById('card').classList.toggle('dark')
+  // document.getElementById('contact').classList.toggle('dark')
+})
+
+
+// POPUP ACESSIBILIDADE
+var myCollapseEl = document.getElementById('myCollapse')
+
+myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
+  // Action to execute once the collapsible area is expanded
 })
 
 //  ALTERA LÇINGUAGEM

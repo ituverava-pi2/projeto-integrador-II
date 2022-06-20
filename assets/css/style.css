@@ -26,6 +26,7 @@
   --bg-panel: #ebebeb;
   --color-headings: hsl(var(--hue), 100%, 26%);
   --color-text: #333333;
+  --card-dark: #445760;
 }
 
 /*========= Scroll Suave =========*/
@@ -54,8 +55,7 @@ body {
   text-align: center;
   overflow: overlay;
 
-  /* background-color: var(--bg); */
-  background-color: #ececec;
+  background-color: var(--brand-beige);
 
   align-items: flex-start;
   justify-content: left;
@@ -69,10 +69,18 @@ body.dark {
   background: #292c35;
 }
 
+
+/*======================== MOBILE FIRST ============================= */
+
+
 .wrapper {
   width: min(50rem, 100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
+}
+
+#navigation {
+  background-color: var(--primary-color);
 }
 
 
@@ -124,6 +132,20 @@ section .content p {
   color: var(--paragraph);
 }
 
+.btn-access {
+  background: transparent;
+  border: none;
+}
+
+.btn-access svg {
+  fill: #fff;
+}
+
+.btn-access svg:hover {
+  fill: var(--brand-dark);
+  stroke: var(--brand-dark);
+}
+
 .button {
   background: var(--primary-color);
 
@@ -162,28 +184,82 @@ section .content p {
 }
 
 /*======CUSTOM COLORS======*/
+
+
+#services .card .img-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: transparent;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+
+#services .card .mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: transparent;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#services .card .chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: transparent;
+  width: 20%;
+  height: 350px;
+  margin: 0 auto;
+}
+
+
+
+#services .card .card-email {
+  font-size: 14px;
+  color: rgb(87, 87, 87);
+}
+
+#services .card p {
+  font-size: 14px;
+  color: rgb(87, 87, 87);
+}
+
 #services .card circle {
-  fill: var(--brand-light);
+  /* fill: var(--brand-light); */
+  fill: var(--brand-light-2);
 }
 
 /* CHANGE THEME COLORS */
-
 #services.dark h1 {
   color: var(--primary-color);
 }
 
-#services.dark .content .cards .card {
+#services .content .cards .card {
   background-color: var(--bg-panel);
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--bg-panel);
 }
 
 #services.dark .content .cards .card p {
-  color: var(--color-text);
+  color: var(--brand-light);
 }
 
 #services.dark .content .cards .card h3 {
   color: var(--primary-color);
 }
+
+#services.dark .content .cards .card {
+  background-color: var(--card-dark);
+  border: solid 1px var(--card-dark);
+}
+
 
 #contact.dark h3 {
   color: var(--brand-light);
@@ -195,6 +271,20 @@ section .content p {
 
 /* ======================= */
 
+
+/* ======================= */
+/* ***** navigation ****** */
+/* ======================= */
+
+#navigation .btn-access svg {
+  fill: var(--brand-light);
+}
+
+#navigation .btn-access svg:hover {
+  fill: var(--brand-dark);
+}
+
+
 #navigation .logo path[fill*='#00856F'],
 #backToTopButton circle {
   fill: var(--primary-color);
@@ -202,7 +292,7 @@ section .content p {
 
 button.open-menu path[stroke*='#00856F'],
 #contact li path {
-  stroke: var(--primary-color);
+  stroke: var(--brand-light);
 }
 
 body.menu-expanded #navigation .logo path,
@@ -279,7 +369,6 @@ body.menu-expanded .menu {
   top: 0;
   left: 0;
   background: var(--primary-color);
-
   width: 100vw;
   height: 100vh;
 
@@ -446,8 +535,8 @@ body.menu-expanded button path {
   padding: 2.4rem;
   text-align: left;
 
-  /* background: #ffffff; */
-  background-color: var(--bg-panel);
+  /* background-color: var(--bg-panel); */
+  background-color: var(--color-text);
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 }
@@ -506,13 +595,11 @@ body.menu-expanded button path {
 footer {
   background-color: var(--brand-dark);
   color: var(--color-text);
-  padding-block: 8rem;
+  padding-block: 3rem;
 
   text-align: left;
   color: white;
 }
-
-
 
 footer .logo {
   display: inline-block;
@@ -542,6 +629,15 @@ footer p {
 footer .social-links {
   justify-content: flex-start;
 }
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--brand-beige);
+  margin: 0 auto;
+}
+
 
 /*======BACK TO TOP======*/
 #backToTopButton {
@@ -640,7 +736,7 @@ nav#navigation .opcoes #botao3:hover {
 
 
 
-/*======================== RESPONSIVO ============================= */
+/*======================== DESCKTOP ============================= */
 @media (min-width: 1024px) {
   /*============GERAL============*/
   body {
@@ -651,6 +747,7 @@ nav#navigation .opcoes #botao3:hover {
     width: min(112rem, 100%);
     display: grid;
   }
+  
 
   .col-a {
     grid-area: A;
@@ -667,6 +764,10 @@ nav#navigation .opcoes #botao3:hover {
   section header h2 {
     font-size: 4rem;
     line-height: 5.2rem;
+  }
+
+  #navigation {
+    background-color: var(--primary-color);
   }
 
   /*============NAVIGATION============*/
@@ -707,7 +808,10 @@ nav#navigation .opcoes #botao3:hover {
   }
 
   nav#navigation .menu ul li a {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: white;
+    text-decoration: none;
+    
     opacity: 0.7;
   }
 
@@ -718,10 +822,12 @@ nav#navigation .opcoes #botao3:hover {
     align-items: center;
     padding: 1rem 2.4rem;
 
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
+    border: 1px solid var(--brand-light);
     border-radius: 4rem;
 
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: var(--brand-light);
 
     font-weight: 700;
     font-size: 1.4rem;
@@ -730,7 +836,8 @@ nav#navigation .opcoes #botao3:hover {
   }
 
   nav#navigation .menu a.button:hover {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: var(--brand-dark);
     border: none;
     color: white;
   }
@@ -783,11 +890,6 @@ nav#navigation .opcoes #botao3:hover {
   }
   /* ========== FIM DARK / LIGTH THEME =============*/
 
-
-  /* nav#navigation .dark {
-    position: absolute;
-    margin-right: 10px;
-  } */
   
 
   /* ************** avatar select ********** */
@@ -982,6 +1084,29 @@ nav#navigation .opcoes #botao3:hover {
   #services .card {
     width: 30%;
     flex-grow: 1;
+    background-color: var(--card-dark);
+  }
+
+  #services .card .mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: transparent;
+    width: 100%;
+    height: 550px;
+    margin: 0 auto;
+  }
+  
+  #services .card .chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: transparent;
+    width: 20%;
+    height: 350px;
+    margin: 0 auto;
   }
 
   /*============ ABOUT =============*/
@@ -1011,11 +1136,8 @@ nav#navigation .opcoes #botao3:hover {
 
   /*============ FOOTER =============*/
   footer {
-    /* padding-block: 3rem;
-    height: 60px; */
-
     background-color: var(--primary-color);
-    padding-block: 6rem;
+    padding-block: 2rem;
   
     text-align: left;
     color: white;
