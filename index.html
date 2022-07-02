@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PI II - Home</title>
-  <link rel="shortcut icon" href="assets/img/logo-page.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" media="screen and (max-width: 768px)" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <title>Foco na Dengue</title>
 
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
     integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
@@ -22,293 +19,310 @@
     integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css" media="print">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
 </head>
 
 <body>
-  <header>
-    <div class="container">
 
-      <!-- <button class="btn-access" type="button" onclick="ocultarExibir()">
+  <nav id="navigation">
+    <div class="wrapper">
+
+      <button class="btn-access" type="button" onclick="alert('Acessibilidade')">
         <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill="#000000">
           <path
             d="M20.125 9.25Q18.667 9.25 17.667 8.25Q16.667 7.25 16.667 5.792Q16.667 4.375 17.667 3.375Q18.667 2.375 20.125 2.375Q21.542 2.375 22.542 3.375Q23.542 4.375 23.542 5.792Q23.542 7.25 22.542 8.25Q21.542 9.25 20.125 9.25ZM28.625 36.667V28.083Q28.625 28.083 28.625 28.083Q28.625 28.083 28.625 28.083H20.792Q19.125 28.083 17.958 26.917Q16.792 25.75 16.792 24.042V14.625Q16.792 13.208 17.729 12.25Q18.667 11.292 20.125 11.292Q20.958 11.292 21.646 11.625Q22.333 11.958 23.208 12.958Q25.083 14.958 27.271 16.229Q29.458 17.5 32 17.625V20.708Q29.958 20.708 27.708 19.792Q25.458 18.875 23.542 17.375V24.042H28.292Q29.875 24.042 30.938 25.104Q32 26.167 32 27.75V36.667ZM16.375 36.958Q12.833 36.958 10.354 34.5Q7.875 32.042 7.875 28.458Q7.875 25.458 9.979 22.979Q12.083 20.5 15.417 20.083V23.583Q13.5 23.875 12.396 25.312Q11.292 26.75 11.292 28.458Q11.292 30.625 12.75 32.104Q14.208 33.583 16.417 33.583Q18.083 33.583 19.521 32.479Q20.958 31.375 21.292 29.458H24.75Q24.375 32.792 21.875 34.875Q19.375 36.958 16.375 36.958Z" />
         </svg>
-      </button> -->
+      </button>
 
-      <img src="assets/img/svg/logo-dengue-nao.svg" alt="Logo da página com mosquito da dengue" />
+      <a class="logo" href="#home">
+        <img width="120" height="25" style="margin: 0; margin-top: 0.5rem; margin-bottom: 0.5rem;"
+          src="assets/img/logo.png" alt="Logomarca com o mosquito da dengue">
+        <!-- <img src="assets/img/logo.png" alt="Logomarca da univesp"> -->
+      </a>
 
-      <div class="menu-section">
-        <div class="menu-toggle">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
+
+
+      <div class="menu">
+        <ul>
+          <li>
+            <a class="active" onclick="closeMenu()" href="#home">Início</a>
+          </li>
+          <li><a onclick="closeMenu()" href="estatisticas.html">Estatísticas</a></li>
+          <li><a onclick="closeMenu()" href="contato.html">Contato</a></li>
+        </ul>
+
+        <div>
+          <a class="button" onclick="closeMenu()" href="formulario.html">Denunciar</a>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Inicio</a>
-            </li>
-            <li>
-              <a href="estatisticas.html">Estatísticas</a>
-            </li>
-            <li>
-              <a href="contato.html">Contato</a>
-            </li>
-            <li>
-              <a href="formulario.html">Denúncia</a>
-            </li>
-          </ul>
-        </nav>
+
+
+        <div class="dark">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <i class="ball"></i>
+          </label>
+        </div>
+
+
+        <!-- Idioma -->
+        <div class="opcoes">
+          <button onclick="changeLanguage('br')" title="Idiona Português" id="botao1" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <path fill="#6DA544"
+                d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z"></path>
+              <path fill="#FFDA44" d="M256 100.174L467.478 256 256 411.826 44.523 256 256 100.174z"></path>
+              <path fill="#F0F0F0"
+                d="M256 345.043c49.177 0 89.043-39.866 89.043-89.043 0-49.177-39.866-89.043-89.043-89.043-49.177 0-89.043 39.866-89.043 89.043 0 49.177 39.866 89.043 89.043 89.043z">
+              </path>
+              <path fill="#0052B4"
+                d="M211.478 250.436c-15.484 0-30.427 2.355-44.493 6.725.623 48.64 40.227 87.884 89.015 87.884 30.168 0 56.812-15.017 72.919-37.968-27.557-34.497-69.958-56.641-117.441-56.641zM343.394 273.06a89.45 89.45 0 001.651-17.06c0-49.178-39.866-89.043-89.043-89.043-36.694 0-68.194 22.201-81.826 53.899a183.693 183.693 0 0137.305-3.812c51.717-.001 98.503 21.497 131.913 56.016z">
+              </path>
+            </svg>
+
+          </button>
+
+          <button onclick="changeLanguage('en')" title="Idioma Inglês" id="botao2" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <g clip-path="url(#clip0)">
+                <path fill="#F0F0F0"
+                  d="M256 511.999c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z">
+                </path>
+                <path fill="#D80027"
+                  d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zM244.87 122.434h229.556a257.354 257.354 0 00-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.75 512 256 512zM37.574 389.564h436.852a254.474 254.474 0 0028.755-66.783H8.819a254.475 254.475 0 0028.755 66.783z">
+                </path>
+                <path fill="#0052B4"
+                  d="M118.584 39.977h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 00-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 00-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 00-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 000 255.999h256v-256c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm100.115 100.083l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z">
+                </path>
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <path fill="#fff" d="M0 0H512V512H0z" transform="translate(0 -.001)"></path>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+
+          <button onclick="changeLanguage('es')" type="button" title="Idioma Espanhol" id="botao3" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <path fill="#FFDA44"
+                d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256c0-31.314-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z">
+              </path>
+              <path fill="#D80027"
+                d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.093 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z">
+              </path>
+            </svg>
+
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <div class="agenda" onclick="ocultarExibir()">
-
-    <div class="dark">
-      <input type="checkbox" class="checkbox" id="chk" />
-      <label class="label" for="chk">
-        <i class="fas fa-moon fa-2x"></i>
-        <i class="fas fa-sun fa-2x"></i>
-        <i class="ball"></i>
-      </label>
-    </div>
-
-    <!-- <i id="icon-dark" style="color: #035346;" title="Alterar cor da tela" class="fas fa-moon fa-5x"></i>
-    <i id="icon-language" style="color: #035346;" title="Mudar idioma" class="fas fa-globe fa-5x"></i> -->
-
-    <div class="opcoes">
-      <button onclick="changeLanguage('br')" title="Idiona Português" id="botao1" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <path fill="#6DA544"
-            d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z"></path>
-          <path fill="#FFDA44" d="M256 100.174L467.478 256 256 411.826 44.523 256 256 100.174z"></path>
-          <path fill="#F0F0F0"
-            d="M256 345.043c49.177 0 89.043-39.866 89.043-89.043 0-49.177-39.866-89.043-89.043-89.043-49.177 0-89.043 39.866-89.043 89.043 0 49.177 39.866 89.043 89.043 89.043z">
-          </path>
-          <path fill="#0052B4"
-            d="M211.478 250.436c-15.484 0-30.427 2.355-44.493 6.725.623 48.64 40.227 87.884 89.015 87.884 30.168 0 56.812-15.017 72.919-37.968-27.557-34.497-69.958-56.641-117.441-56.641zM343.394 273.06a89.45 89.45 0 001.651-17.06c0-49.178-39.866-89.043-89.043-89.043-36.694 0-68.194 22.201-81.826 53.899a183.693 183.693 0 0137.305-3.812c51.717-.001 98.503 21.497 131.913 56.016z">
-          </path>
-        </svg>
-
-      </button>
-
-      <button onclick="changeLanguage('en')" title="Idioma Inglês" id="botao2" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <g clip-path="url(#clip0)">
-            <path fill="#F0F0F0"
-              d="M256 511.999c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z">
-            </path>
-            <path fill="#D80027"
-              d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zM244.87 122.434h229.556a257.354 257.354 0 00-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.75 512 256 512zM37.574 389.564h436.852a254.474 254.474 0 0028.755-66.783H8.819a254.475 254.475 0 0028.755 66.783z">
-            </path>
-            <path fill="#0052B4"
-              d="M118.584 39.977h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 00-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 00-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 00-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 000 255.999h256v-256c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm100.115 100.083l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z">
-            </path>
-          </g>
-          <defs>
-            <clipPath id="clip0">
-              <path fill="#fff" d="M0 0H512V512H0z" transform="translate(0 -.001)"></path>
-            </clipPath>
-          </defs>
+      <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 9H21" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 1H21" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 17L21 17" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
 
-      <button onclick="changeLanguage('es')" type="button" title="Idioma Espanhol" id="botao3" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <path fill="#FFDA44"
-            d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256c0-31.314-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z">
-          </path>
-          <path fill="#D80027"
-            d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.093 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z">
-          </path>
+      <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
         </svg>
-
       </button>
     </div>
+  </nav>
 
-    <i id="icon-acessibility" class="fas fa-universal-access fa-5x"></i>
-  </div>
+  <section id="services">
+    <div class="wrapper">
+      <header>
+        <h1 id="title-page">No Foco da Dengue</h1>
+      </header>
 
+      <!-- "irmão do header"(cabeçalho) -->
+      <div class="content">
+        <div class="cards">
+          <div class="card">
 
+            <img src="assets/img/carro-de-combate-a-dengue-pulverizando-bairro.png"
+              alt="Imagem de carro de combate de dengue pulverizando bairro">
 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
 
-  <section class="hero">
-    <div class="container">
-      <div>
-        <h2 id="hero-title">
-          Encontre aqui informações sobre a dengue na região metropolitana de Franca-SP.
-        </h2>
-        <h1 id="hero-subtitle">
-          No meio de tanta informação e da quantidade de ferramentas que
-          surgem todos os dias, você precisa de informações precisas e decentralizadas.
-        </h1>
-        <!-- <a href="#" class="button" onclick="mostraLargura()">Mais informações</a> -->
+            <h3 id="title-prev">Prevenção</h3>
+            <p id="description-prev">
+              Pesquisas realizadas em campo indicam que os grandes reservatórios, como caixas d'água, galões e tonéis
+              (muito utilizados para armazenagem de água para uso doméstico em locais dotados de infraestrutura urbana
+              precária), são os locais com maiores números de criadouros do mosquito Aedes Aegypti, e portanto, os mais
+              perigosos..
+            </p>
+
+            <br>
+            <a id="button-more-prev" class="button" href="prevencao.html">Veja mais</a>
+
+          </div>
+
+          <div class="card">
+
+            <img src="assets/img/mosquito-da-dengue-picando-mao-da-pessoa.png"
+              alt="Imagem de mosquito picando mão de uma pessoa">
+
+            <div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <h3 id="title-info">Informações</h3>
+            </div>
+            <p id="description-info">
+              Todo paciente com suspeita de dengue deve receber soro de reidratação oral, de imediato, em sua chegada na
+              unidade de saúde, mesmo enquanto aguarda atendimento. ATENÇÃO! Os sinais de alarme e o agravamento do
+              quadro clínico costumam ocorrer na fase de remissão da febre (entre o 3º e 6º dia da doença) ATENÇÃO!.
+            </p>
+
+            <br>
+            <a id="button-more-info" class="button" href="informacoes.html">Veja mais</a>
+
+          </div>
+
+          <div class="card">
+
+            <img src="assets/img/doutor-sorrindo-segurando-prancheta-pacientes-sorrindo.png"
+              alt="Imagem de doutor atendendo pacientes sorrindo">
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <h3 id="title-atend">Atendimento ao público</h3>
+            <p id="description-atend">
+              Toda pessoa com suspeita de dengue deve receber o primeiro atendimento na Unidade de Saúde que procurar,
+              onde será avaliado e classificado clinicamente. O tratamento deve ser iniciado imediatamente. Os exames
+              laboratoriais, hemograma e sorologia, serão solicitados em tempo oportuno segundo orientações da
+              Secretaria de Saúde do Município.
+            </p>
+
+            <br>
+            <a id="button-more-atend" class="button" href="atendimento.html">Veja mais</a>
+
+          </div>
+
+        </div>
       </div>
-      <img src="assets/img/svg/doctors_green.svg"
-        alt="Imagem de médico ao lado de uma enfermeira segurando um prontuário." />
     </div>
   </section>
 
-  <main>
-    <section class="cards">
+  <section id="contact">
+    <div class="wrapper">
+      <div class="col-a">
+        <header>
+          <h3>Entre em Contato.</h3>
+        </header>
 
-      <div class="card">
-        <div class="image">
-          <img src="assets/img/green-background.jpg" />
-        </div>
         <div class="content">
-          <div class="info">
-            <p id="title-prev" class="price">Prevenção</p>
-          </div>
-          <p id="description-prev">
-            Pesquisas realizadas em campo indicam que os grandes reservatórios, como caixas d'água, galões e tonéis
-            (muito utilizados para armazenagem de água para uso doméstico em locais dotados de infraestrutura urbana
-            precária), são os locais com maiores números de criadouros do mosquito Aedes Aegypti, e portanto, os mais
-            perigosos..
-          </p>
-          <br>
-          <br>
-          <br>
-          <a href="prevencao.html" id="button-more-prev" class="button-card">Veja mais</a>
+          <ul>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M25 18.3333V8.33333L20 3.33333L15 8.33333V11.6667H5V35H35V18.3333H25ZM11.6667 31.6667H8.33333V28.3333H11.6667V31.6667ZM11.6667 25H8.33333V21.6667H11.6667V25ZM11.6667 18.3333H8.33333V15H11.6667V18.3333ZM21.6667 31.6667H18.3333V28.3333H21.6667V31.6667ZM21.6667 25H18.3333V21.6667H21.6667V25ZM21.6667 18.3333H18.3333V15H21.6667V18.3333ZM21.6667 11.6667H18.3333V8.33333H21.6667V11.6667ZM31.6667 31.6667H28.3333V28.3333H31.6667V31.6667ZM31.6667 25H28.3333V21.6667H31.6667V25Z"
+                  fill="#00856F" />
+              </svg>
+              São Joaquim da Barra
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                  fill="#00856F" />
+              </svg>(16) 3728-5319
+            </li>
+
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                  stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                  stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Rua Minas Gerais, 2020 - Centro
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                  stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M22 6L12 13L2 6" stroke="#00856F" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              contato@contato.com.br
+            </li>
+          </ul>
+
+          <!--===Usando API do WhatsApp====-->
+          <a class="button" href="https://wa.me/5511987654321" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                fill="white" />
+            </svg>
+
+            Entre em contato
+          </a>
         </div>
       </div>
 
-      <div class="card">
-        <div class="image">
-          <img src="assets/img/green-background.jpg" />
-        </div>
-        <div class="content">
-          <div class="info">
-            <p id="title-info" class="price">Informações</p>
-          </div>
-          <p id="description-info">
-            Todo paciente com suspeita de dengue deve receber soro de reidratação oral, de imediato, em sua chegada na
-            unidade de saúde, mesmo enquanto aguarda atendimento. ATENÇÃO! Os sinais de alarme e o agravamento do
-            quadro clínico costumam ocorrer na fase de remissão da febre (entre o 3º e 6º dia da doença) ATENÇÃO!.
-          </p>
-          <br>
-          <br>
-          <br>
-          <a href="informacoes.html" id="button-more-info" class="button-card">Veja Mais</a>
-        </div>
+      <div class="col-b">
+        <img class="w-100" src="assets/img/mbr-1476x924.jpg"
+          alt="Homem tocando com o dedo em uma imagem de um envelope, simbolizando o envio de email">
       </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="assets/img/green-background.jpg" />
-        </div>
-        <div class="content">
-          <div class="info">
-            <p id="title-atend" class="price">Atendimento ao público</p>
-          </div>
-          <p id="description-atend">
-            Toda pessoa com suspeita de dengue deve receber o primeiro atendimento na Unidade de Saúde que procurar,
-            onde será avaliado e classificado clinicamente. O tratamento deve ser iniciado imediatamente. Os exames
-            laboratoriais, hemograma e sorologia, serão solicitados em tempo oportuno segundo orientações da
-            Secretaria de Saúde do Município.
-          </p>
-          <br>
-          <br>
-          <br>
-          <a href="atendimento.html" id="button-more-atend" class="button-card">Veja mais</a>
-        </div>
-      </div>
-
-      <br>
-      <br>
-
-    </section>
-  </main>
-
+    </div>
+  </section>
+  <br>
   <br>
 
-  <footer class="footer">
-    <img class="logo" src="assets/img/svg/logo-dengue-nao.svg" alt="Logotipo da página com mosquito da dengue" />
-    <p>
-      Projeto Integrador II Univesp
-      <br>
-      ©2022 Grupo 073 - Ituverava-SP.
-    </p>
+
+
+  <!-- <footer> -->
+  <footer class="footer navbar-fixed-bottom">
+    <div class="wrapper">
+      <div class="col-a">
+        <a class="logo" href="#home">
+          <img src="assets/img/logo.png" alt="Logomarca da univesp">
+        </a>
+        <p>
+          Projeto Integrador II Univesp
+          <br>
+          ©2022 Grupo 073 - Ituverava-SP.
+        </p>
+        <br>
+      </div>
+    </div>
   </footer>
 
+  <a id="backToTopButton" href="#services">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#00856F" />
+      <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
 
-  <!-- <div onclick="ocultarPopup()" id="popup-access">
-    <p id="popup-label">Tema Dark/Ligth</p>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 
-    <div class="dark">
-      <input type="checkbox" class="checkbox" id="chk" />
-      <label class="label" for="chk">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-        <i class="ball"></i>
-      </label>
-    </div>
-
-    <br>
-
-    <p>Idioma</p>
-    <div class="opcoes">
-      <button onclick="changeLanguage('br')" title="Idiona Português" id="botao1" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <path fill="#6DA544"
-            d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z"></path>
-          <path fill="#FFDA44" d="M256 100.174L467.478 256 256 411.826 44.523 256 256 100.174z"></path>
-          <path fill="#F0F0F0"
-            d="M256 345.043c49.177 0 89.043-39.866 89.043-89.043 0-49.177-39.866-89.043-89.043-89.043-49.177 0-89.043 39.866-89.043 89.043 0 49.177 39.866 89.043 89.043 89.043z">
-          </path>
-          <path fill="#0052B4"
-            d="M211.478 250.436c-15.484 0-30.427 2.355-44.493 6.725.623 48.64 40.227 87.884 89.015 87.884 30.168 0 56.812-15.017 72.919-37.968-27.557-34.497-69.958-56.641-117.441-56.641zM343.394 273.06a89.45 89.45 0 001.651-17.06c0-49.178-39.866-89.043-89.043-89.043-36.694 0-68.194 22.201-81.826 53.899a183.693 183.693 0 0137.305-3.812c51.717-.001 98.503 21.497 131.913 56.016z">
-          </path>
-        </svg>
-
-      </button>
-
-      <button onclick="changeLanguage('en')" title="Idioma Inglês" id="botao2" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <g clip-path="url(#clip0)">
-            <path fill="#F0F0F0"
-              d="M256 511.999c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z">
-            </path>
-            <path fill="#D80027"
-              d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zM244.87 122.434h229.556a257.354 257.354 0 00-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.75 512 256 512zM37.574 389.564h436.852a254.474 254.474 0 0028.755-66.783H8.819a254.475 254.475 0 0028.755 66.783z">
-            </path>
-            <path fill="#0052B4"
-              d="M118.584 39.977h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 00-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 00-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 00-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 000 255.999h256v-256c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm100.115 100.083l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z">
-            </path>
-          </g>
-          <defs>
-            <clipPath id="clip0">
-              <path fill="#fff" d="M0 0H512V512H0z" transform="translate(0 -.001)"></path>
-            </clipPath>
-          </defs>
-        </svg>
-      </button>
-
-      <button onclick="changeLanguage('es')" type="button" title="Idioma Espanhol" id="botao3" class="gOcwcv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
-          <path fill="#FFDA44"
-            d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256c0-31.314-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z">
-          </path>
-          <path fill="#D80027"
-            d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.093 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z">
-          </path>
-        </svg>
-
-      </button>
-    </div>
-
-  </div> -->
-
-  <!-- <a id="btnAccessibility" href="#" onclick="ocultarExibir()">
-    <i class="fas fa-universal-access fa-6x"></i>
-  </a> -->
-
-  <script src="assets/js/access.js"></script>
-  <script src="assets/js/menu.js"></script>
 </body>
-
-</html>

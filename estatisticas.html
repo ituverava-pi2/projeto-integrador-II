@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PI II - Estatística</title>
-  <link rel="shortcut icon" href="assets/img/logo-page.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Foco na Dengue</title>
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" media="screen and (max-width: 768px)" />
 
-  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
+    integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
+    integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-bottom/">
-
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css" media="print">
-  <script src="assets/js/fontawesome.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- GRAFICOS -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -31,24 +33,17 @@
     // Draw the chart and set the chart values
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Task', 'Notificados em 2022'],
-        ['Ituverava', 436],
-        ['Guará', 14],
-        ['São Joaquim da Barra', 153],
-        ['Orlândia', 274],
-        ['Morro Agudo', 590],
-        ['Franca', 5061]
+        ['Task', 'Hours per Day'],
+        ['Ituverava', 120],
+        ['Guará', 80],
+        ['São Joaquim da Barra', 250],
+        ['Morro Agudo', 85],
+        ['Franca', 600]
       ]);
 
       // Optional; add a title and set the width and height of the chart
-      var options = {
-        'backgroundColor': 'transparent',
-        "legend": { textStyle: { fontSize: 18 } },
-        "legend": 'left',
-        'width': 580,
-        'height': 400,
-        'is3D': true
-      };
+      var options = { 'backgroundColor': 'transparent', 'width': 320, 'height': 250, 'is3D': true };
+
 
       // Display the chart inside the <div> element with id="piechart"
       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -56,103 +51,212 @@
     }
   </script>
 
+
 </head>
 
 <body>
-  <header>
-    <div class="container">
 
-      <div class="logo">
-        <img src="assets/img/svg/logo-dengue-nao.svg" alt="Logo da página com mosquito da dengue" />
-      </div>
+  <nav id="navigation">
+    <div class="wrapper">
+
+      <button class="btn-access" type="button" onclick="alert('Acessibilidade')">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill="#000000">
+          <path
+            d="M20.125 9.25Q18.667 9.25 17.667 8.25Q16.667 7.25 16.667 5.792Q16.667 4.375 17.667 3.375Q18.667 2.375 20.125 2.375Q21.542 2.375 22.542 3.375Q23.542 4.375 23.542 5.792Q23.542 7.25 22.542 8.25Q21.542 9.25 20.125 9.25ZM28.625 36.667V28.083Q28.625 28.083 28.625 28.083Q28.625 28.083 28.625 28.083H20.792Q19.125 28.083 17.958 26.917Q16.792 25.75 16.792 24.042V14.625Q16.792 13.208 17.729 12.25Q18.667 11.292 20.125 11.292Q20.958 11.292 21.646 11.625Q22.333 11.958 23.208 12.958Q25.083 14.958 27.271 16.229Q29.458 17.5 32 17.625V20.708Q29.958 20.708 27.708 19.792Q25.458 18.875 23.542 17.375V24.042H28.292Q29.875 24.042 30.938 25.104Q32 26.167 32 27.75V36.667ZM16.375 36.958Q12.833 36.958 10.354 34.5Q7.875 32.042 7.875 28.458Q7.875 25.458 9.979 22.979Q12.083 20.5 15.417 20.083V23.583Q13.5 23.875 12.396 25.312Q11.292 26.75 11.292 28.458Q11.292 30.625 12.75 32.104Q14.208 33.583 16.417 33.583Q18.083 33.583 19.521 32.479Q20.958 31.375 21.292 29.458H24.75Q24.375 32.792 21.875 34.875Q19.375 36.958 16.375 36.958Z" />
+        </svg>
+      </button>
+
+      <a class="logo" href="#home">
+        <img width="120" height="25" style="margin: 0; margin-top: 0.5rem; margin-bottom: 0.5rem;"
+          src="assets/img/logo.png" alt="Logomarca com o mosquito da dengue">
+        <!-- <img src="assets/img/logo.png" alt="Logomarca da univesp"> -->
+      </a>
 
 
-      <div class="menu-section">
-        <div class="menu-toggle">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
+
+      <div class="menu">
+        <ul>
+          <li>
+            <a class="active" onclick="closeMenu()" href="index.html">Início</a>
+          </li>
+          <li><a onclick="closeMenu()" href="estatisticas.html">Estatísticas</a></li>
+          <li><a onclick="closeMenu()" href="#">Contato</a></li>
+        </ul>
+
+        <div>
+          <a class="button" onclick="closeMenu()" href="formulario.html">Denunciar</a>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="#">Estatísticas</a>
-            </li>
-            <li>
-              <a href="contato.html">Contato</a>
-            </li>
-            <li>
-              <a href="formulario.html">Denúncia</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <div>
-        <h2 id="hero-title">
-          Encontre aqui informações sobre a dengue na região metropolitana de Franca-SP.
-        </h2>
-        <h1 id="hero-subtitle">
-          No meio de tanta informação e da quantidade de ferramentas que
-          surgem todos os dias, você precisa de informações precisas e decentralizadas.
-        </h1>
-        <!-- <a href="#" class="button" onclick="mostraLargura()">Mais informações</a> -->
+
+        <div class="dark">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <i class="ball"></i>
+          </label>
+        </div>
+
+
+        <!-- Idioma -->
+        <div class="opcoes">
+          <button onclick="changeLanguage('br')" title="Idiona Português" id="botao1" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <path fill="#6DA544"
+                d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z"></path>
+              <path fill="#FFDA44" d="M256 100.174L467.478 256 256 411.826 44.523 256 256 100.174z"></path>
+              <path fill="#F0F0F0"
+                d="M256 345.043c49.177 0 89.043-39.866 89.043-89.043 0-49.177-39.866-89.043-89.043-89.043-49.177 0-89.043 39.866-89.043 89.043 0 49.177 39.866 89.043 89.043 89.043z">
+              </path>
+              <path fill="#0052B4"
+                d="M211.478 250.436c-15.484 0-30.427 2.355-44.493 6.725.623 48.64 40.227 87.884 89.015 87.884 30.168 0 56.812-15.017 72.919-37.968-27.557-34.497-69.958-56.641-117.441-56.641zM343.394 273.06a89.45 89.45 0 001.651-17.06c0-49.178-39.866-89.043-89.043-89.043-36.694 0-68.194 22.201-81.826 53.899a183.693 183.693 0 0137.305-3.812c51.717-.001 98.503 21.497 131.913 56.016z">
+              </path>
+            </svg>
+
+          </button>
+
+          <button onclick="changeLanguage('en')" title="Idioma Inglês" id="botao2" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <g clip-path="url(#clip0)">
+                <path fill="#F0F0F0"
+                  d="M256 511.999c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z">
+                </path>
+                <path fill="#D80027"
+                  d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zM244.87 122.434h229.556a257.354 257.354 0 00-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.75 512 256 512zM37.574 389.564h436.852a254.474 254.474 0 0028.755-66.783H8.819a254.475 254.475 0 0028.755 66.783z">
+                </path>
+                <path fill="#0052B4"
+                  d="M118.584 39.977h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 00-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 00-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 00-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 000 255.999h256v-256c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm100.115 100.083l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z">
+                </path>
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <path fill="#fff" d="M0 0H512V512H0z" transform="translate(0 -.001)"></path>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+
+          <button onclick="changeLanguage('es')" type="button" title="Idioma Espanhol" id="botao3" class="gOcwcv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 512 512">
+              <path fill="#FFDA44"
+                d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256c0-31.314-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z">
+              </path>
+              <path fill="#D80027"
+                d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.093 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z">
+              </path>
+            </svg>
+
+          </button>
+        </div>
       </div>
-      <img src="assets/img/svg/information-green.svg"
-        alt="Imagem de médico ao lado de uma enfermeira segurando um prontuário." />
+
+      <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 9H21" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 1H21" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 17L21 17" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section id="services">
+    <div class="wrapper">
+      <header>
+        <h1 id="title-page">ESTATÍSTICAS</h1>
+      </header>
+
+      <div class="content">
+        <div class="cards">
+
+          <div class="card">
+            <img class="img-card" src="assets/img/brasoes/brasao_itu.png" alt="Brasão da cidade de Guará">
+            <div>
+              <h3>ITUVERAVA</h3>
+            </div>
+            <p class="mbr-text mbr-fonts-style mb-4 display-4">Casos: 130<br>Confirmados: 100<br>Em
+              análise: 30<br>Óbitos: 2<br></p>
+          </div>
+
+          <div class="card">
+            <img class="img-card" src="assets/img/brasoes/brasao_guara.png" alt="Brasão da cidade de Guará">
+            <div>
+              <h3>GUARÁ</h3>
+            </div>
+            <p class="mbr-text mbr-fonts-style mb-4 display-4">Casos: 130<br>Confirmados: 100<br>Em
+              análise: 30<br>Óbitos: 2<br></p>
+          </div>
+
+          <div class="card">
+            <img class="img-card" src="assets/img/brasoes/brasao_sjb.png"
+              alt="Brasão da cidade de São Joaquim da Barra">
+            <div>
+              <h3>SAO JOAQUIM</h3>
+            </div>
+            <p class="mbr-text mbr-fonts-style mb-4 display-4">Casos: 250<br>Confirmados: 230<br>Em
+              análise: 20<br>Óbitos: 2<br></p>
+          </div>
+
+          <div class="card">
+            <img class="img-card" src="assets/img/brasoes/brasao_magudo.png" alt="Brasão da cidade de Morro Agudo">
+            <br>
+            <h3>MORRO AGUDO</h3>
+            <p class="mbr-text mbr-fonts-style mb-4 display-4">Casos: 85<br>Confirmados: 80<br>Em
+              análise: 5<br>Óbitos: 1<br></p>
+            <br>
+          </div>
+
+          <div class="card">
+            <img class="img-card" src="assets/img/brasoes/brasao_franca.png" alt="Brasão da cidade de Franca">
+            <br>
+            <h3>FRANCA</h3>
+            <p class="mbr-text mbr-fonts-style mb-4 display-4">Casos: 589<br>Confirmados: 430<br>Em
+              análise: 159<br>Óbitos: 5<br></p>
+            <br>
+            <br>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
 
-  <div class="titulos">
-    <h1>DADOS JANEIRO à MAIO DE 2022</h1>
-  </div>
-
-
-  <main>
-    <section class="cards">
-      <!-- <div class="card">
-        <div class="image">
-          <img src="assets/img/green-background.jpg" />
-        </div>
-        <div class="content">
-          <div class="info">
-            <p id="title-prev" class="price">Cidade</p>
-          </div>
-          <p id="description-prev">
-          </p>
-        </div>
-      </div> -->
-
-    </section>
-  </main>
-
-  <br>
-
   <section id="services">
     <div class="wrapper">
-
-      <br>
+      <header>
+        <h1 id="title-page">LOCAIS DE RISCO</h1>
+      </header>
 
       <div class="content">
         <div class="cards">
 
           <div class="card">
             <div>
+              <span><strong>Selecione a cidade: </strong></span>
+              <span><select id="combo" name="select" style="width:250px; height: 35px;">
+                  <option value="cid2">Ituverava</option>
+                  <option value="cid3">Guará</option>
+                  <option value="cid4" selected>São Joaquim da Barra</option>
+                  <option value="cid1">Franca</option>
+                  <option value="cid5">Morro Agudo</option>
+                </select></span>
+
               <br>
-              <span><strong>
-                  <h2>Selecione o marcador da cidade no mapa para mais informações:</h2>
-                </strong>
-              </span>
               <br>
-              <br>
+
+              <!-- <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d59761.437437571905!2d-47.898306917559!3d-20.58438842428932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1654929234383!5m2!1spt-BR!2sbr"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
               <iframe class="mapa"
                 src="https://www.google.com/maps/d/embed?mid=1cMzpRHWj82NWqQ0NqUwtPvF6dRrqTwI&hl=pt-BR&ehbc=2E312F"
                 width="640" height="480"></iframe>
@@ -169,37 +273,45 @@
   <section id="services">
     <div class="wrapper">
       <header>
-        <center>
-          <h1 id="title-page">DEMONSTRATIVO ANO 2022</h1>
-        </center>
+        <h1 id="title-page">TOTAL DE CASOS POR CIDADE</h1>
       </header>
 
       <div class="content">
         <div class="cards">
-
-          <div class="card">
-            <div id="piechart"></div>
-          </div>
-
+          <div class="chart" id="piechart"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <br>
-  <br>
 
-  <footer class="footer">
-    <img class="logo" src="assets/img/svg/logo-dengue-nao.svg" alt="Logotipo da página com mosquito da dengue" />
-    <p>
-      Projeto Integrador II Univesp
-      <br>
-      ©2022 Grupo 073 - Ituverava-SP.
-    </p>
+  <footer class="footer navbar-fixed-bottom">
+    <div class="wrapper">
+      <div class="col-a">
+        <a class="logo" href="#home">
+          <img src="assets/img/logo.png" alt="Logomarca da univesp">
+        </a>
+        <p>
+          Projeto Integrador II Univesp
+          <br>
+          ©2022 Grupo 073 - Ituverava-SP.
+        </p>
+        <br>
+      </div>
+    </div>
   </footer>
 
-  <script src="assets/js/scripts.js"></script>
-  <script src="assets/js/menu.js"></script>
-</body>
+  <a id="backToTopButton" href="#services">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#00856F" />
+      <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
 
-</html>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+</body>

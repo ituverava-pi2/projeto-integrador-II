@@ -1,188 +1,303 @@
 <!DOCTYPE html>
 <html>
+<html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PI II - Prevenção</title>
-  <link rel="shortcut icon" href="assets/img/logo-page.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" media="screen and (max-width: 768px)" />
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-bottom/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.6.5, mobirise.com">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:title" content="Prevenção">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/img/logo-page.png" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css" media="print">
-  <script src="assets/js/fontawesome.min.js"></script>
+    <title>Prevenção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-  <header>
-    <div class="container">
+    <nav id="navigation">
+        <div class="wrapper">
 
-      <div class="logo">
-        <img src="assets/img/svg/logo-dengue-nao.svg" alt="Logo da página com mosquito da dengue" />
-      </div>
+            <a class="logo" href="#home">
+                <img width="120" height="25" style="margin: 0; margin-top: 0.5rem; margin-bottom: 0.5rem;"
+                    src="assets/img/logo.png" alt="Logomarca com o mosquito da dengue">
+            </a>
 
-      <div class="menu-section">
-        <div class="menu-toggle">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a class="active" onclick="closeMenu()" href="index.html">Início</a>
+                    </li>
+                </ul>
+
+                <div>
+                    <a class="button" onclick="closeMenu()" href="formulario.html">Denunciar</a>
+                </div>
+
+                <div class="dark">
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="ball"></i>
+                    </label>
+                </div>
+
+                <div class="opcoes">
+                    <button onclick="changeLanguage('br')" title="Português" id="botao1" class="gOcwcv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
+                            viewBox="0 0 512 512">
+                            <path fill="#6DA544"
+                                d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z">
+                            </path>
+                            <path fill="#FFDA44" d="M256 100.174L467.478 256 256 411.826 44.523 256 256 100.174z">
+                            </path>
+                            <path fill="#F0F0F0"
+                                d="M256 345.043c49.177 0 89.043-39.866 89.043-89.043 0-49.177-39.866-89.043-89.043-89.043-49.177 0-89.043 39.866-89.043 89.043 0 49.177 39.866 89.043 89.043 89.043z">
+                            </path>
+                            <path fill="#0052B4"
+                                d="M211.478 250.436c-15.484 0-30.427 2.355-44.493 6.725.623 48.64 40.227 87.884 89.015 87.884 30.168 0 56.812-15.017 72.919-37.968-27.557-34.497-69.958-56.641-117.441-56.641zM343.394 273.06a89.45 89.45 0 001.651-17.06c0-49.178-39.866-89.043-89.043-89.043-36.694 0-68.194 22.201-81.826 53.899a183.693 183.693 0 0137.305-3.812c51.717-.001 98.503 21.497 131.913 56.016z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button onclick="changeLanguage('en')" title="Inglês" id="botao2" class="gOcwcv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
+                            viewBox="0 0 512 512">
+                            <g clip-path="url(#clip0)">
+                                <path fill="#F0F0F0"
+                                    d="M256 511.999c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z">
+                                </path>
+                                <path fill="#D80027"
+                                    d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zM244.87 122.434h229.556a257.354 257.354 0 00-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.75 512 256 512zM37.574 389.564h436.852a254.474 254.474 0 0028.755-66.783H8.819a254.475 254.475 0 0028.755 66.783z">
+                                </path>
+                                <path fill="#0052B4"
+                                    d="M118.584 39.977h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 00-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 00-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 00-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 000 255.999h256v-256c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm100.115 100.083l-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574l8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z">
+                                </path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <path fill="#fff" d="M0 0H512V512H0z" transform="translate(0 -.001)"></path>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+
+                    <button onclick="changeLanguage('es')" type="button" title="Espanhol" id="botao3" class="gOcwcv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
+                            viewBox="0 0 512 512">
+                            <path fill="#FFDA44"
+                                d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256c0-31.314-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z">
+                            </path>
+                            <path fill="#D80027"
+                                d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.093 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z">
+                            </path>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+
+            <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9H21" stroke="#00856F" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M1 1H21" stroke="#00856F" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M1 17L21 17" stroke="#00856F" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="#">Estatísticas</a>
-            </li>
-            <li>
-              <a href="contato.html">Contato</a>
-            </li>
-            <li>
-              <a href="formulario.html">Denúncia</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </nav>
 
-  <section class="hero">
-    <div class="container">
-      <div>
-        <h2>
-          Prevenção é a solução.
-        </h2>
-        <h1>
-          Ninguém está livre de ser infectado pela dengue.
-          Por isso, a melhor forma de combater a dengue
-          é eliminar o mosquito Aedes aegypti.
-        </h1>
-        <!-- <a href="#" class="button">Mais informações</a> -->
-      </div>
-      <div class="hero-media">
-        <br>
+    <section id="cabecalho">
+        <div class="wrapper">
+            <header>
+                <h1 id="title-page">PREVENÇÃO</h1>
+            </header>
 
-        <div>
-          <iframe class="mbr-embedded-video"
-            src="https://www.youtube.com/embed/OcSHW3dMgPM?rel=0&amp;amp;mute=1&amp;showinfo=0&amp;autoplay=0&amp;loop=0"
-            width="380" height="300" frameborder="0" allowfullscreen></iframe>
+            <div class="mbr-figure col-12 col-md-12">
+                <div class="player">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Vd46-nq0Ds?controls=0"
+                        title="Secretaria de saúde de São Paulo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section class="more-info">
-    <div class="grid-container">
-      <div class="grid-item">
-        <picture>
-          <source srcset="assets/img/banners/faca-sua-parte.jpeg" media="(max-width: 600px)">
-          <source srcset="assets/img/banners/faca-sua-parte.jpeg" media="(max-width: 1500px)">
-          <source srcset="assets/img/banners/faca-sua-parte.jpeg">
-          <img src="assets/img/banners/faca-sua-parte.jpeg" alt="Flowers" style="width:auto;">
-        </picture>
-      </div>
-    </div>
-  </section>
-
-  <main>
-    <section class="cards">
-
-      <div class="card">
-        <div class="content">
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number1.png" alt="Imagem contendo o número um" />
-            <h3>Mantenha bem tampados: caixas, tonéis e barris de água.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number2.png" alt="Imagem contendo o número dois" />
-            <h3>Coloque o lixo em sacos plásticos e mantenha a lixeira sempre bem fechada.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number3.png" alt="Imagem contendo o número três" />
-            <h3>Não jogue lixo em terrenos baldios.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number4.png" alt="Imagem contendo o número quatro" />
-            <h3>Se for guardar garrafas de vidro ou plástico, mantenha sempre a boca para baixo.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number5.png" alt="Imagem contendo o número cinco" />
-            <h3>Não deixe a água da chuva acumulada sobre a laje.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number6.png" alt="Imagem contendo o número seis" />
-            <h3>Encha os pratinhos ou vasos de planta com areia até a borda.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number7.png" alt="Imagem contendo o número sete" />
-            <h3>Se for guardar pneus velhos em casa, retire toda a água e mantenha-os em locais cobertos, protegidos da
-              chuva.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number8.png" alt="Imagem contendo o número oito" />
-            <h3>Limpe as calhas com frequência, evitando que galhos e folhas possam impedir a passagem da água.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number9.png" alt="Imagem contendo o número nove" />
-            <h3>Lave com frequência, com água e sabão, os recipientes utilizados para guardar água, pelo menos uma vez
-              por semana.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number10.png" alt="Imagem contendo o número dez" />
-            <h3>Os vasos de plantas aquáticas devem ser lavados com água e sabão, toda semana. É importante trocar a
-              água desses vasos com frequência.</h3>
-          </div>
-
-          <div class="card-item">
-            <img src="assets/img/numeros/number11.png" alt="Imagem contendo o número onze" />
-            <h3>Convoque seus vizinhos, sua comunidade, amigos e parentes a se engajarem nesse combate aos criadouros do
-              mosquito Aedes aegypti.</h3>
-          </div>
-
-        </div>
-      </div>
-
-
     </section>
-  </main>
 
-  <br>
 
-  <footer class="footer">
-    <img class="logo" src="assets/img/svg/logo-dengue-nao.svg" alt="Logotipo da página com mosquito da dengue" />
-    <p>
-      Projeto Integrador II Univesp
-      <br>
-      ©2022 Grupo 073 - Ituverava-SP.
-    </p>
-  </footer>
+    <section id="services">
+        <div class="wrapper">
+            <header>
+                <h1 id="title-page">Outras Informações</h1>
+            </header>
 
-  <!-- <script src="assets/js/scripts.js"></script> -->
-  <script src="assets/js/menu.js"></script>
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+
+                        <img src="assets/img/carro-de-combate-a-dengue-pulverizando-bairro.png"
+                            alt="Imagem de carro de combate de dengue pulverizando bairro">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <h3 id="title-prev">Prevenção</h3>
+                        <p id="description-prev">
+                            Pesquisas realizadas em campo indicam que os grandes reservatórios, como caixas d'água,
+                            galões e tonéis
+                            (muito utilizados para armazenagem de água para uso doméstico em locais dotados de
+                            infraestrutura urbana
+                            precária), são os locais com maiores números de criadouros do mosquito Aedes Aegypti, e
+                            portanto, os mais
+                            perigosos..
+                        </p>
+
+                        <br>
+                        <a id="button-more-prev" class="button" href="prevencao.html">Veja mais</a>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="assets/img/mosquito-da-dengue-picando-mao-da-pessoa.png"
+                            alt="Imagem de mosquito picando mão de uma pessoa">
+
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                                <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <h3 id="title-info">Informações</h3>
+                        </div>
+                        <p id="description-info">
+                            Todo paciente com suspeita de dengue deve receber soro de reidratação oral, de imediato, em
+                            sua chegada na
+                            unidade de saúde, mesmo enquanto aguarda atendimento. ATENÇÃO! Os sinais de alarme e o
+                            agravamento do
+                            quadro clínico costumam ocorrer na fase de remissão da febre (entre o 3º e 6º dia da doença)
+                            ATENÇÃO!.
+                        </p>
+
+                        <br>
+                        <a id="button-more-info" class="button" href="informacoes.html">Veja mais</a>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="assets/img/doutor-sorrindo-segurando-prancheta-pacientes-sorrindo.png"
+                            alt="Imagem de doutor atendendo pacientes sorrindo">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <h3 id="title-atend">Atendimento ao público</h3>
+                        <p id="description-atend">
+                            Toda pessoa com suspeita de dengue deve receber o primeiro atendimento na Unidade de Saúde
+                            que procurar,
+                            onde será avaliado e classificado clinicamente. O tratamento deve ser iniciado
+                            imediatamente. Os exames
+                            laboratoriais, hemograma e sorologia, serão solicitados em tempo oportuno segundo
+                            orientações da
+                            Secretaria de Saúde do Município.
+                        </p>
+
+                        <br>
+                        <a id="button-more-atend" class="button" href="atendimento.html">Veja mais</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer navbar-fixed-bottom">
+        <div class="wrapper">
+            <div class="col-a">
+                <a class="logo" href="#home">
+                    <img src="assets/img/logo.png" alt="Logomarca da univesp">
+                </a>
+                <p>
+                    Projeto Integrador II Univesp
+                    <br>
+                    ©2022 Grupo 073 - Ituverava-SP.
+                </p>
+                <br>
+            </div>
+        </div>
+    </footer>
+
+
+    <a id="backToTopButton" href="#services">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="#00856F" />
+            <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+
+
 
 </body>
 
