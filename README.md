@@ -6,7 +6,7 @@ O tema do seu Projeto Integrador (PI) neste semestre é: **Desenvolver um softwa
 
 ## Links Úteis
 
-- [Repositório no GitHub]([robson-tazinaffo/projeto-integrador-2 (github.com)](https://github.com/robson-tazinaffo/projeto-integrador-2))
+- [Repositório no GitHub]([ituverava-pi2/projeto-integrador-2 (github.com)](https://github.com/ituverava-pi2/projeto-integrador-II))
 
 ### Requisitos:
 
