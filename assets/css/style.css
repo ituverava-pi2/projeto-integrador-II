@@ -922,26 +922,33 @@ FORM
     position: relative;
     background-color: var(--primary-color);
     width: 100%;
-    height: 120px;
+    height: 140px;
     bottom: 0;
+
+    font-weight: 700;
+    font-family: Arial, Helvetica, Verdana, sans-serif, 'Segoe UI';
+    font-size: 1.6rem;
+    color: black;
+        
 }
 
 .footer .logo {
-    background-color: var(--primary-color);
     width: 150px;
     height: 60px;
     margin-left: 15px;
+    margin-top: 1rem;
 }
 
-.footer p {
-    background-color: var(--primary-color);
-    font-weight: 400;
-    font-family: sans-serif;
-    font-size: 14px;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    color: white;
+.footer h2 {
+    font-family: Arial, Helvetica, Verdana, sans-serif, 'Segoe UI';
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
+
 
 /* =============================== */
 /* ============ OUVIDORIA ======== */

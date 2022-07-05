@@ -1,28 +1,19 @@
-// TELA MODO DARK
+// FUNÇÕES DE ACESSIBILIDADE
 const chk = document.getElementById('chk')
 
 chk.addEventListener('change', () => {
-    // document.body.classList.toggle('dark');
-
     var element = document.body;
     element.classList.toggle("dark-mode");
-
-    // document.getElementById('box').style.background = '#000'; 
-
 })
 
-// POPUP ACESSIBILIDADE
-var visibilidade = false //Variável que vai manipular o botão Exibir/ocultar
+var visibilidade = false 
 function ocultarExibir() {
-    // Quando clicar no botão.
     if (visibilidade) {
-        //Se a variável visibilidade for igual a true, então...
-        document.getElementById('popup-access').style.display = 'none' //Ocultamos a div
-        visibilidade = false //alteramos o valor da variável para falso.
+        document.getElementById('popup-access').style.display = 'none' 
+        visibilidade = false 
     } else {
-        //ou se a variável estiver com o valor false..
-        document.getElementById('popup-access').style.display = 'block' //Exibimos a div..
-        visibilidade = true //Alteramos o valor da variável para true.
+        document.getElementById('popup-access').style.display = 'block' 
+        visibilidade = true 
     }
 }
 
@@ -34,7 +25,6 @@ function ocultarPopup() {
     document.getElementById('popup-access').style.display = 'none'
 }
 
-//  ALTERA LINGUAGEM
 function changeLanguage(idioma) {
     if (idioma === 'br') {
         // console.log('Idioma português...')
@@ -127,7 +117,6 @@ function changeLanguage(idioma) {
        `
     }
 
-    // Fecha o menu
     document.body.classList.remove('menu-expanded')
 }
 
