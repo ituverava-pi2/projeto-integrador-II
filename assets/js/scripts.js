@@ -15,9 +15,7 @@ const pesquisarDados = async () => {
                     '<img src="assets/img/green-background.jpg" />' +
                     '</div>' +
                     '<div class="content">' +
-                    '<img src="' +
-                    item.imagem +
-                    '" class="brasao"/>' +
+                    '<img src="./assets/img/flags/' + item.id + ".png" + '" class="brasao"/>' +
                     '</div>' +
                     '<div class="info">' +
                     '<p class="price text--medium">' +
@@ -30,12 +28,6 @@ const pesquisarDados = async () => {
                     '<br>' +
                     'Confirmados: ' +
                     item.confirmados +
-                    // '<br>' +
-                    // 'Em análise: ' +
-                    // item.analise +
-                    // '<br>' +
-                    // 'Óbitos: ' +
-                    // item.obitos +
                     '</p>' +
                     '</div>' +
                     '</div>'
