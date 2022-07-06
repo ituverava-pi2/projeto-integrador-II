@@ -1,5 +1,5 @@
 const pesquisarDados = async () => {
-    const url = 'http://rtiinformatica.dev.br:3000/table'
+    const url = 'https://pi-02.herokuapp.com/table'
 
     const containerEl = document.querySelector('.cards')
 
